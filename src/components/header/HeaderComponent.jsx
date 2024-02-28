@@ -1,20 +1,45 @@
 import React from 'react'
 import { Col, Row } from 'antd';
-import { Input } from 'antd';
-const { Search } = Input;
+import { WrapperHeader, WrapperTextHeader, WrapperHeaderAccount } from './style';
+import { UserOutlined, CaretDownOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import InputSearch from '../InputSearch/InputSearch';
+
+
+
+
 
 const HeaderComponent = () => {
   return (
-    <div className='h-40 bg-[#1A94FF] text-center pt-[30px] pr-[120px] justify-center items-center  '>
-      <Row>
-      <Col className='text-[30px] text-[#fff] font-bold ' span={3}>Laptop</Col>
-      <Col className='text-[18px] text-[#fff] font-bold' span={15}>
-        <input className='p-2 w-max' type="text" placeholder='search' />
-      </Col>
-      <Col className='text-[18px] text-[#fff] font-bold' span={6}>
-        col-8
-      </Col>
-    </Row>
+    <div>
+      <WrapperHeader className='grid items-center '>
+        <Row>
+          <Col  
+               span={6}> <WrapperTextHeader>Laptop</WrapperTextHeader>
+          </Col>
+          <Col span={12}>
+          <InputSearch placeholder="Nhập Từ Khóa" textbutton="Tìm Kiếm" size="large"  />
+          </Col>
+          <Col className='text-right pr-52 pt-8 flex gap-12 content-center' span={6}>
+            <WrapperHeaderAccount className='flex '>
+              <UserOutlined className='text-[45px] pl-20'/>
+              <div >
+                <div><span className='text-[12px] decoration-white pr-3'>Đăng nhập</span></div>
+                <div><span className='text-[12px] decoration-white pr-9 '>Đăng Ký</span></div>
+                <div className='flex-wrap content-center'>
+                  <span className='text-[12px] decoration-white'>Tài Khoản</span> 
+                  <CaretDownOutlined />
+                </div>
+              </div>
+            </WrapperHeaderAccount>
+            <div className='pt-4'>
+              
+                <ShoppingCartOutlined className='text-[45px]'/>
+                <span className='text-[12px] decoration-white'>Giỏ <br />Hàng</span>
+              
+            </div>
+          </Col>
+        </Row>
+    </WrapperHeader>
     </div>
   )
 }
