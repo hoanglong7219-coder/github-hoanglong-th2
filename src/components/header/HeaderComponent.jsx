@@ -11,7 +11,7 @@ import InputSearch from '../InputSearch/InputSearch';
 const HeaderComponent = () => {
   return (
     <div>
-      <WrapperHeader className='grid items-center '>
+      <WrapperHeader className='grid items-center flex-nowrap '>
         <Row>
           <Col  
                span={6}> <WrapperTextHeader>Laptop</WrapperTextHeader>
@@ -23,18 +23,18 @@ const HeaderComponent = () => {
             <WrapperHeaderAccount className='flex '>
               <UserOutlined className='text-[45px] pl-20'/>
               <div >
-                <div><span className='text-[12px] decoration-white pr-3'>Đăng nhập</span></div>
-                <div><span className='text-[12px] decoration-white pr-9 '>Đăng Ký</span></div>
+                <div><span className='text-[12px] decoration-white pr-3 whitespace-nowrap'>Đăng nhập/Đăng Ký</span></div>
+                
                 <div className='flex-wrap content-center'>
                   <span className='text-[12px] decoration-white'>Tài Khoản</span> 
                   <CaretDownOutlined />
                 </div>
               </div>
             </WrapperHeaderAccount>
-            <div className='pt-4'>
+            <div className='pt-4 flex'>
               
-                <ShoppingCartOutlined className='text-[45px]'/>
-                <span className='text-[12px] decoration-white'>Giỏ <br />Hàng</span>
+                <div><ShoppingCartOutlined className='text-[45px]'/></div>
+                <div><span className='text-[12px] decoration-white whitespace-nowrap float-none'>Giỏ Hàng</span></div>
               
             </div>
           </Col>

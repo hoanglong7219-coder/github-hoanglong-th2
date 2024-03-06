@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const ProductType = () => {
+export const ProductType = ({name}) => {
   return (
-    <div>ProductType</div>
+    <div>{name}</div>
   )
 }
