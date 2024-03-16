@@ -15,10 +15,10 @@ export const ImgSliderComponent = ({arrImg}) => {
   return (
     <div>
     <Slider  {...settings}>
-      {arrImg.map((image,index)=>{
+      {arrImg.map((image, index)=>{
         return(
-          <div>
-          <Image className='object-fill' src={image} alt="slider" key={index} preview={false} width="100%" height="420px"/>
+          <div key={index}>
+          <Image className='object-fill absolute' src={image} alt="slider" key={arrImg.index} preview={false} width="100%" height="420px"/>
           </div>
         )
       })}

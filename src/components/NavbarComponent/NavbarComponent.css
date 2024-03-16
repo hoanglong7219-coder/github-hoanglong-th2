@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .textlabel {
+    @apply text-sm bg-[#38383D] font-medium;
+  }
+  .text {
+    @apply text-xs bg-[#38383D] font-normal;
+  }
+}

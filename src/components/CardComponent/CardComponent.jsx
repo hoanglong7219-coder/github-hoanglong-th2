@@ -1,17 +1,19 @@
 
 import React from 'react';
-import { Card } from 'antd';
 import { StyleNameProduct , WrapperReportText, WrapperPrice, WrapperDiscountText } from './Style';
 import { StarFilled } from '@ant-design/icons';
+import { WrapperCard } from './Style';
+import logo from '../../Assets/logo.png'
+import { Image } from 'antd';
 
 const CardComponent = () => {
   return (
-    <Card
-        className='mt-5 items-center gap-5'
+    <WrapperCard
+        className='mt-5 items-center gap-5 '
         hoverable
-        style={{ width: 240 }}
-        cover={<img alt="example" width="200px" height="200px" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
     >
+        <Image src={logo} alt="" width="68px" height="14px" />
         <StyleNameProduct>Iphone</StyleNameProduct>
         
         <WrapperReportText>
@@ -24,7 +26,7 @@ const CardComponent = () => {
         </WrapperDiscountText>
         </WrapperPrice>
 
-    </Card>
+    </WrapperCard>
   )
 }
 

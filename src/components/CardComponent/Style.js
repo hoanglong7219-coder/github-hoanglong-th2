@@ -1,5 +1,15 @@
+import { Card } from "antd";
 import styled from "styled-components";
 
+export const WrapperCard= styled(Card)`
+    width:200px;
+    height:400px;
+    & img {
+        height:200px;
+        width:200px;
+    }
+
+`
 export const StyleNameProduct = styled.div`
     font-weight: 400;
     font-size: 12px;
